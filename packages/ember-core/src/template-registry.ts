@@ -38,6 +38,7 @@ import Progress from './components/progress.gts';
 import Scaffold from './components/scaffold.gts';
 import Sidebar from './components/sidebar.gts';
 import Toaster from './components/toaster.gts';
+import NavigationStack from './components/navigation-stack.gts';
 import Bind from './helpers/bind.ts';
 import LookupService from './helpers/lookup-service.ts';
 import Version from './helpers/version.ts';
@@ -63,6 +64,7 @@ export interface ComponentRegistry {
   Scaffold: typeof Scaffold;
   Sidebar: typeof Sidebar;
   Toaster: typeof Toaster;
+  NavigationStack: typeof NavigationStack;
 
   // Form components
   Form: typeof Form;

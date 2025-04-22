@@ -1,0 +1,12 @@
+{{page-title "Navigation Stack Demos"}}
+
+<h1>Navigation Stack Component</h1>
+
+<h2>Route-based Navigation</h2>
+<div class="stack-demo">
+  <NavigationStack
+    @initialRoute="stacked-page"
+    @onRouteChange={{this.handleRouteChange}}
+    as |stack|
+  />
+</div>

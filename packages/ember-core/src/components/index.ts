@@ -44,6 +44,7 @@ import Scaffold from './scaffold.gts';
 import Sidebar from './sidebar.gts';
 import Toaster from './toaster.gts';
 import Tooltip from './tooltip.gts';
+import NavigationStack from './navigation-stack.gts';
 
 export default {
   /* Forms */
@@ -75,6 +76,7 @@ export default {
   LoadingIndicator,
   Modal,
   NavItem,
+  NavigationStack,
   PageNotFound,
   Pagination,
   Popover,

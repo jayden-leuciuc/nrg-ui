@@ -1,33 +1,33 @@
-<h3>Selected Item: {{@model}}</h3>
+{{page-title (concat "Item Details - " @model)}}
 
-<ul class="list-group">
-  <LinkTo
-    class="list-group-item"
-    @route="stacked-page.selected-item.selected-subitem"
-    @model={{6}}
-  >SubItem 6</LinkTo>
-  <LinkTo
-    class="list-group-item"
-    @route="stacked-page.selected-item.selected-subitem"
-    @model={{7}}
-  >SubItem 7</LinkTo>
-  <LinkTo
-    class="list-group-item"
-    @route="stacked-page.selected-item.selected-subitem"
-    @model={{8}}
-  >SubItem 8</LinkTo>
-  <LinkTo
-    class="list-group-item"
-    @route="stacked-page.selected-item.selected-subitem"
-    @model={{9}}
-  >SubItem 9</LinkTo>
-  <LinkTo
-    class="list-group-item"
-    @route="stacked-page.selected-item.selected-subitem"
-    @model={{10}}
-  >SubItem 10</LinkTo>
+<h1>Item Details - {{@model}}</h1>
+
+<p>This is the detail page for item {{@model}}.</p>
+
+<h2>Subitems</h2>
+<ul>
+  <li>
+    <LinkTo
+      @route="stacked-page.selected-item.selected-subitem"
+      @models={{array @model "subitem1"}}
+    >Subitem 1</LinkTo>
+  </li>
+  <li>
+    <LinkTo
+      @route="stacked-page.selected-item.selected-subitem"
+      @models={{array @model "subitem2"}}
+    >Subitem 2</LinkTo>
+  </li>
+  <li>
+    <LinkTo
+      @route="stacked-page.selected-item.selected-subitem"
+      @models={{array @model "subitem3"}}
+    >Subitem 3</LinkTo>
+  </li>
 </ul>
 
-<hr />
+<button type="button" {{on "click" this.goBack}}>
+  Back to List
+</button>
 
 {{outlet}}

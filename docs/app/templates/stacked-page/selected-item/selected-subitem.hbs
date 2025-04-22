@@ -1,1 +1,9 @@
-<h3>Selected SubItem: {{@model}}</h3>
+{{page-title (concat "Subitem Details - " @model)}}
+
+<h1>Subitem Details - {{@model}}</h1>
+
+<p>This is the detail page for subitem {{@model}} of item.</p>
+
+<button type="button" {{on "click" this.goBack}}>
+  Back to Item
+</button>

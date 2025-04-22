@@ -216,6 +216,7 @@
       "./components/mktg/workflow-tray.js": "./dist/_app_/components/mktg/workflow-tray.js",
       "./components/modal.js": "./dist/_app_/components/modal.js",
       "./components/nav-item.js": "./dist/_app_/components/nav-item.js",
+      "./components/navigation-stack.js": "./dist/_app_/components/navigation-stack.js",
       "./components/page-not-found.js": "./dist/_app_/components/page-not-found.js",
       "./components/pagination.js": "./dist/_app_/components/pagination.js",
       "./components/popover.js": "./dist/_app_/components/popover.js",

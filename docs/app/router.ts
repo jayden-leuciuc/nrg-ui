@@ -59,6 +59,7 @@ Router.map(function () {
   });
   this.route('scaffold');
   this.route('services');
+  this.route('navigation-stack');
   this.route(
     'stacked-page',
     {

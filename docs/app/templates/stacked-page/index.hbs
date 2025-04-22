@@ -1,0 +1,26 @@
+{{page-title "Stacked Page Demo"}}
+
+<h1>Stacked Page - Main List</h1>
+
+<p>This demonstrates how the NavigationStack component can work with routes.</p>
+
+<h2>Items</h2>
+<ul>
+  <li>
+    <LinkTo @route="stacked-page.selected-item" @model="item1">Item 1</LinkTo>
+  </li>
+  <li>
+    <LinkTo @route="stacked-page.selected-item" @model="item2">Item 2</LinkTo>
+  </li>
+  <li>
+    <LinkTo @route="stacked-page.selected-item" @model="item3">Item 3</LinkTo>
+  </li>
+</ul>
+
+<button
+  type="button"
+  {{on "click" this.goBack}}
+  disabled={{not this.router.previousRoute}}
+>
+  Go Back
+</button>

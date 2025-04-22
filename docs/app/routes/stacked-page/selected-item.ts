@@ -1,7 +1,7 @@
 import Route from '@ember/routing/route';
 
-export default class SelectedItemRoute extends Route {
-  async model(params: Record<string, unknown>) {
-    return params['item_id'];
+export default class StackedPageSelectedItemRoute extends Route {
+  model(params: { item_id: string }) {
+    return params.item_id;
   }
 }

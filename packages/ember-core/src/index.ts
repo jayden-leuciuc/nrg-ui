@@ -52,6 +52,7 @@ export { default as Scaffold } from './components/scaffold.gts';
 export { default as Sidebar } from './components/sidebar.gts';
 export { default as Toaster } from './components/toaster.gts';
 export { default as Tooltip } from './components/tooltip.gts';
+export { default as NavigationStack } from './components/navigation-stack.gts';
 
 /* Helpers */
 export { bind, default as Bind } from './helpers/bind.ts';
@@ -126,6 +127,7 @@ export type {
 export type { ScaffoldSignature } from './components/scaffold.gts';
 export type { SidebarSignature } from './components/sidebar.gts';
 export type { ToasterSignature } from './components/toaster.gts';
+export type { NavigationStackSignature } from './components/navigation-stack.gts';
 
 export type Binding<Model extends object = Record<string, unknown>> = {
   model: Model;
