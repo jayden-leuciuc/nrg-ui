@@ -87,4 +87,7 @@ Router.map(function () {
       this.route('on-update');
     },
   );
+  this.route('test-stack-top');
+  this.route('test-stack-middle');
+  this.route('test-stack-bottom');
 });

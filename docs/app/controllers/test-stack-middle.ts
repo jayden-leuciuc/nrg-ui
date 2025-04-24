@@ -2,13 +2,9 @@ import Controller from '@ember/controller';
 import { action } from '@ember/object';
 import { service } from '@ember/service';
 
-import type RouterService from '@ember/routing/router-service';
-import type { NavigationService } from 'docs/app/services/navigation';
+import type NavigationService from 'docs/services/navigation';
 
-export default class StackedPageIndexController extends Controller {
-  @service
-  declare router: RouterService;
-
+export default class TestStackMiddleController extends Controller {
   @service
   declare navigation: NavigationService;
 
@@ -19,5 +15,10 @@ export default class StackedPageIndexController extends Controller {
     } else {
       window.history.back();
     }
+  }
+
+  @action
+  progress(): void {
+    this.navigation.push('test-stack-middle');
   }
 }

@@ -10,6 +10,10 @@ export default class StackedPageSelectedItemSelectedSubitemController extends Co
 
   @action
   goBack(): void {
-    this.navigation.pop();
+    if (this.navigation.canGoBack) {
+      this.navigation.pop();
+    } else {
+      window.history.back();
+    }
   }
 }
