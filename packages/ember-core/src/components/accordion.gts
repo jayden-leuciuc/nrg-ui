@@ -8,6 +8,7 @@ export interface AccordionSignature {
   Args: {
     title?: string;
     defaultOpen?: boolean;
+    onChange?: (isOpen: boolean) => void;
   };
   Blocks: {
     content: [];
@@ -22,6 +23,7 @@ export default class Accordion extends Component<AccordionSignature> {
   @action
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+    this.args.onChange?.(this.isMenuOpen);
   }
 
   get classList() {

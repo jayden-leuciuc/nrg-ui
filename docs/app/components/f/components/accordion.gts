@@ -1,3 +1,4 @@
+import { array } from '@ember/helper';
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import Accordion from '@nrg-ui/core/components/accordion';
@@ -31,6 +32,9 @@ export default class AccordionDemo extends Component {
               @required={{true}}
             />
           </Api.Arguments>
+          <Api.Actions as |Action p|>
+            <Action @name="onChange" @parameters={{array (p "isOpen" type="boolean")}} />
+          </Api.Actions>
           <Api.Blocks as |Block|>
             <Block @description="Named yield block to render the hidden content" @name="content" />
           </Api.Blocks>

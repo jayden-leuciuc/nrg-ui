@@ -77,4 +77,17 @@ module('Integration | Component | Accordion', function (hooks) {
       .dom('div button h3.custom-title')
       .hasText('Custom Title', 'Title block yields correctly');
   });
+
+  test('it fired onChange', async function () {
+    assert.expect(2);
+
+    const onChangeHandler = () => {
+      assert.ok(true, 'action is fired');
+    };
+
+    await render(<template><Accordion @title="Foo bar" @onChange={{onChangeHandler}} /></template>);
+    assert.dom('button').containsText('Foo bar');
+
+    await click('button');
+  });
 });
