@@ -1,6 +1,7 @@
 name: Build and publish docs
 
 on:
+  workflow_dispatch:
   workflow_run:
     workflows:
       - Publish Stable
@@ -12,7 +13,6 @@ on:
 jobs:
   docs:
     name: Build and publish docs
-    if: github.event.workflow_run.conclusion == 'success' || github.event.workflow_run.conclusion == 'skipped'
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
